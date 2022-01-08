@@ -1,4 +1,6 @@
- echo "[TASK 7] Pull required containers"
+#!/bin/bash
+
+  echo "[TASK 7] Pull required containers"
   kubeadm config images pull >/dev/null 2>&1
 
   echo "[TASK 8] Initialize Kubernetes Cluster"
