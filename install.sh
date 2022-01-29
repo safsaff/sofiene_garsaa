@@ -5,7 +5,7 @@
 
 echo "[TASK 1] Install containerd runtime"
 apt update -qq >/dev/null 2>&1
-apt install -qq -y containerd apt-transport-https >/dev/null 2>&1
+apt install -qq -y containerd apt-transport-https curl software-properties-common >/dev/null 2>&1
 mkdir /etc/containerd
 containerd config default > /etc/containerd/config.toml
 systemctl restart containerd
