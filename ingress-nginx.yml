@@ -6,7 +6,7 @@ metadata:
     kubernetes.io/ingress.class: nginx
 spec:
   rules:
-  - host: "client.javachinna.xyz"
+  - host: "client.devops.com"
     http:
       paths:
       - pathType: Prefix
@@ -16,7 +16,7 @@ spec:
             name: social-login-app-client
             port:
               number: 80
-  - host: "server.javachinna.xyz"
+  - host: "server.devops.com"
     http:
       paths:
       - pathType: Prefix
