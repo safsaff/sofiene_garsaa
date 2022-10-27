@@ -10,6 +10,9 @@ kubectl create secret generic mysql-db-url --from-literal=database=spring --from
 ###Deploy Ingress Controllor###
 
 1- controller_tag=$(curl -s https://api.github.com/repos/kubernetes/ingress-nginx/releases/latest | grep tag_name | cut -d '"' -f 4)
+
+
+
 2- wget https://github.com/kubernetes/ingress-nginx/archive/refs/tags/${controller_tag}.tar.gz
 
 3- tar xvf ${controller_tag}.tar.gz
