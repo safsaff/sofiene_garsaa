@@ -2,3 +2,15 @@ metadata:
   name: social-login-app-ingress
   annotations:
     kubernetes.io/ingress.class: nginx
+spec:
+  rules:
+  - host: "client.devops.com"
+    http:
+      paths:
+      - pathType: Prefix
+        path: /
+        backend:
+          service:
+            name: social-login-app-client
+            port:
+              number: 80
