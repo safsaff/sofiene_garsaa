@@ -14,3 +14,20 @@ spec:
             name: social-login-app-client
             port:
               number: 80
+  - host: "server.devops.com"
+    http:
+      paths:
+      - pathType: Prefix
+        path: /api/
+        backend:
+          service:
+            name: social-login-app-server
+            port:
+              number: 8080
+      - pathType: Prefix
+        path: /oauth2/
+        backend:
+          service:
+            name: social-login-app-server
+            port:
+              number: 8080
