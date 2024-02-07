@@ -1,1 +1,4 @@
-
+metadata:
+  name: social-login-app-ingress
+  annotations:
+    kubernetes.io/ingress.class: nginx
